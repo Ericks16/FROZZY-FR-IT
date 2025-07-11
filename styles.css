@@ -1,0 +1,121 @@
+/* Colores base */
+:root {
+  --verde: #8dd200;
+  --rosado: #ff4fcc;
+  --blanco: #ffffff;
+  --gris-claro: #f7f7f7;
+  --negro: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--gris-claro);
+  color: var(--negro);
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  background: var(--blanco);
+  padding: 30px 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: var(--verde);
+  font-size: 3rem;
+}
+
+.slogan {
+  color: var(--rosado);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.galeria {
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.galeria h2 {
+  font-size: 2rem;
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+
+.imagenes-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.imagenes-menu img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.imagenes-menu img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-contenido h3 {
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+.modal-contenido p {
+  color: #444;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar:hover {
+  color: var(--rosado);
+}

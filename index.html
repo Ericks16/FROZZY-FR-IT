@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frozzy Früt</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="public/Logo.png" alt="Logo Frozzy Früt" class="logo" />
+    <h1>FROZZY FRÜIT</h1>
+    <p class="slogan">NATURAL FROZEN YOGURT</p>
+  </header>
+
+  <main>
+    <section class="galeria">
+      <h2>Nuestro Menú</h2>
+      <div class="imagenes-menu">
+    <div class="menu-item" onclick="mostrarIngredientes('Mango', 'Crema batida, Galletas, Fresas, Salsas y de base un Waffle')">
+  <img src="public/menu1.jpg" alt="Yogurt Tropical" />
+  <div class="precio"> <h1>Desde $2.50</h1></div>
+    </div>
+     <div class="menu-item"onclick="mostrarIngredientes('Mango', 'Crema batida, Galletas, Fresas, Salsas y de base un Waffle')">
+        <img src="public/menu2.jpg" alt="Menú 1" />
+          <div class="precio"><h1>Desde $3.50</h1></div>
+    </div>
+     <div class="menu-item">
+        <img src="public/menu3.jpg" alt="Menú 1" />
+          <div class="precio"><h1>Desde $2.00</h1   ></div>
+    </div>
+     <div class="menu-item">
+        <img src="public/menu4.jpg" alt="Menú 1" />
+          <div class="precio"><h1>Desde $2.50</h1></div>
+    </div>
+     <div class="menu-item">
+        <img src="public/menu5.jpg" alt="Menú 1" />
+          <div class="precio"><h1>Desde     $2.50 </h1></dsiv>
+    </div>
+    </section>
+  </main>
+  <script>
+function mostrarIngredientes(titulo, detalle) {
+  document.getElementById("tituloIngrediente").innerText = titulo;
+  document.getElementById("detalleIngrediente").innerText = detalle;
+  document.getElementById("modal").style.display = "block";
+}
+
+function cerrarModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+// Cierra modal al hacer clic fuera
+window.onclick = function(event) {
+  const modal = document.getElementById("modal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+  <footer>
+    <p>&copy; 2025 Frozzy Früt. Todos los derechos reservados.</p>
+  </footer>
+</body>
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <h3 id="tituloIngrediente"></h3>
+    <p id="detalleIngrediente"></p>
+  </div>
+</div>
+</html>
+|
